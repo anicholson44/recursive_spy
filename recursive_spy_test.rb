@@ -28,4 +28,11 @@ class RecursiveSpyTest < Minitest::Test
     assert_equal [[1],[2], [3]], spy.calls[:foo].map(&:args)
     assert_equal [1], spy.calls[:foo][2].value.calls[:bar].first.args
   end
+
+  def test_recursive_spy_handles_hash_methods
+    spy = RecursiveSpy.new
+    spy[:foo]
+    assert_equal [:[]], spy.calls.keys
+    assert_equal [:foo], spy.calls[:[]].first.args
+  end
 end
