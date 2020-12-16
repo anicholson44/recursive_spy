@@ -10,4 +10,5 @@ Gem::Specification.new do |s|
   s.homepage =
     'https://rubygems.org/gems/recursive_spy'
   s.license = 'MIT' 
+  s.homepage = 'https://github.com/anicholson44/recursive_spy'
 end
