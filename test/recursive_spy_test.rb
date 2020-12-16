@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require './lib/recursive_spy'
+require './recursive_spy'
 
 class RecursiveSpyTest < Minitest::Test
   def test_recursive_spy_records_method_calls
